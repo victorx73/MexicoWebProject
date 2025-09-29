@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+.news-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.news-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.news-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #166534;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+.news-card:hover .news-title {
+    text-decoration: underline;
+}
+
+.news-desc {
+    color: #374151;
+    margin-top: 0.5rem;
+}
