@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>México Celebra Independência | Noticias de México</title>
+    <style>
+        .glass-effect { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(6, 95, 70, 0.9) 0%, rgba(4, 120, 87, 0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <!-- Header -->
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora'] tracking-tight">
+                            Noticias de México
+                        </h1>
+                        <p class="text-green-200 text-sm hidden md:block">Tu fuente confiable de información</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../../index.html" class="px-6 py-3 bg-white/20 text-white font-semibold rounded-xl border-2 border-white/30">
+                        <i class="fas fa-home mr-2"></i>Início
+                    </a>
+                    <a href="../../politica.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-landmark mr-2"></i>Política
+                    </a>
+                    <a href="../../cultura.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-palette mr-2"></i>Cultura
+                    </a>
+                    <a href="../../economia.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-chart-line mr-2"></i>Economía
+                    </a>
+                </nav>
+
+                <button id="menu-button" class="lg:hidden p-3 bg-white/10 rounded-xl text-white hover:bg-white/20 transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm">
+        <div class="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl transform transition-transform duration-500">
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-green-800 font-['Lora']">Menu</h2>
+                    <button id="close-menu" class="p-2 text-gray-600 hover:text-gray-900 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2 flex-1">
+                    <a href="../../index.html" class="flex items-center p-4 bg-green-100 text-green-700 font-semibold rounded-2xl border-l-4 border-green-500">
+                        <div class="w-10 h-10 bg-green-200 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-green-700"></i>
+                        </div>
+                        <span>Início</span>
+                    </a>
+                    <a href="../../politica.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                            <i class="fas fa-landmark text-blue-600"></i>
+                        </div>
+                        <span>Política</span>
+                    </a>
+                    <a href="../../cultura.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-purple-200 transition-colors">
+                            <i class="fas fa-palette text-purple-600"></i>
+                        </div>
+                        <span>Cultura</span>
+                    </a>
+                    <a href="../../economia.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-green-200 transition-colors">
+                            <i class="fas fa-chart-line text-green-600"></i>
+                        </div>
+                        <span>Economía</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../../index.html" class="hover:text-green-700 transition-colors">Início</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700 font-medium">Artigo em Destaque</span>
+        </nav>
+
+        <!-- Article Content -->
+        <article class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+            <!-- Article Header -->
+            <div class="relative">
+                <div class="h-96 bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center relative overflow-hidden">
+                    <!-- Pattern Overlay -->
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <!-- Content -->
+                    <div class="relative z-10 text-center text-white px-6">
+                        <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full backdrop-blur-sm mb-6">
+                            <i class="fas fa-star mr-2"></i>
+                            <span class="text-sm font-medium">Destaque da Semana</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6 font-['Lora'] leading-tight">
+                            México Celebra el Día de la Independencia con Desfiles Históricos
+                        </h1>
+                        <div class="flex flex-wrap justify-center gap-6 text-green-100">
+                            <span class="flex items-center">
+                                <i class="far fa-calendar mr-2"></i>
+                                16 Septiembre 2024
+                            </span>
+                            <span class="flex items-center">
+                                <i class="far fa-clock mr-2"></i>
+                                8 min de lectura
+                            </span>
+                            <span class="flex items-center">
+                                <i class="far fa-eye mr-2"></i>
+                                15.2K visualizações
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="p-8 md:p-12">
+                <!-- Author Info -->
+                <div class="flex items-center mb-8 p-6 bg-green-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-edit text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800 text-lg">María González</p>
+                        <p class="text-green-600">Correspondente Nacional</p>
+                        <p class="text-sm text-gray-600 mt-1">Especialista em cultura e tradições mexicanas</p>
+                    </div>
+                </div>
+
+                <!-- Article Content -->
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-xl mb-8 text-gray-800 font-light">
+                        Miles de mexicanos se reunieron en el Zócalo de la Ciudad de México para presenciar el desfile militar 
+                        y las celebraciones patrióticas que conmemoran 213 años de independencia. El evento contó con la participación 
+                        de más de 25,000 elementos de las fuerzas armadas en una demostración de unidad nacional.
+                    </p>
+
+                    <!-- Highlight Quote -->
+                    <div class="border-l-4 border-green-500 pl-6 my-8 py-4 bg-green-50 rounded-r-xl">
+                        <p class="text-2xl italic text-gray-800 font-['Lora']">
+                            "Hoy más que nunca, celebramos nuestra identidad como mexicanos y renovamos nuestro compromiso con la patria"
+                        </p>
+                        <p class="text-sm text-gray-600 mt-2">— Presidente de México durante el Grito de Independencia</p>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 font-['Lora']">El Desfile Militar Más Grande de la Historia</h2>
+
+                    <p class="mb-6">
+                        El desfile de este año superó todas las expectativas, con la participación récord de 25,000 efectivos 
+                        militares, 3,500 vehículos blindados, 150 aeronaves y 50 embarcaciones. La avenida Reforma se transformó 
+                        en un escenario de orgullo nacional desde las primeras horas de la mañana.
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <p class="text-2xl font-bold text-green-600">25,000</p>
+                            <p class="text-sm text-gray-600">Militares</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <p class="text-2xl font-bold text-green-600">3,500</p>
+                            <p class="text-sm text-gray-600">Vehículos</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <p class="text-2xl font-bold text-green-600">150</p>
+                            <p class="text-sm text-gray-600">Aeronaves</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <p class="text-2xl font-bold text-green-600">500K+</p>
+                            <p class="text-sm text-gray-600">Espectadores</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 font-['Lora']">Celebraciones en Todo el País</h2>
+
+                    <p class="mb-6">
+                        Las festividades no se limitaron a la capital. En cada estado de la república, los mexicanos celebraron 
+                        con ferias, conciertos y eventos culturales. Desde Tijuana hasta Cancún, las plazas principales se 
+                        llenaron de familias enteras compartiendo el orgullo de ser mexicanos.
+                    </p>
+
+                    <!-- Feature Boxes -->
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                            <i class="fas fa-utensils text-blue-600 text-xl mb-3"></i>
+                            <h3 class="font-semibold text-gray-800 mb-2">Feria Gastronómica Nacional</h3>
+                            <p class="text-sm text-gray-600">Muestra de platillos típicos de las 32 entidades federativas en el Zócalo capitalino.</p>
+                        </div>
+                        <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+                            <i class="fas fa-music text-purple-600 text-xl mb-3"></i>
+                            <h3 class="font-semibold text-gray-800 mb-2">Concierto de Gala</h3>
+                            <p class="text-sm text-gray-600">Presentación de la Orquesta Sinfónica Nacional con repertorio patriótico.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 font-['Lora']">El Grito de Independencia</h2>
+
+                    <p class="mb-6">
+                        El punto culminante de las celebraciones fue, como cada año, el Grito de Independencia. A las 23:00 horas 
+                        del 15 de septiembre, desde el balcón presidencial del Palacio Nacional, se recordaron los nombres de los 
+                        héroes que nos dieron patria y libertad.
+                    </p>
+
+                    <!-- Historical Context -->
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8 rounded-r-xl">
+                        <h3 class="font-semibold text-yellow-800 mb-2">📜 Contexto Histórico</h3>
+                        <p class="text-sm text-yellow-700">
+                            El Grito de Dolores fue el llamado del cura Miguel Hidalgo y Costilla el 16 de septiembre de 1810 
+                            que inició la lucha por la independencia de México. Esta tradición se mantiene viva 213 años después.
+                        </p>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 font-['Lora']">Impacto Turístico y Económico</h2>
+
+                    <p class="mb-6">
+                        Las celebraciones generaron un impacto económico estimado en 15,000 millones de pesos, con una ocupación 
+                        hotelera del 95% en la Ciudad de México. Turistas de 45 países visitaron el país para presenciar las festividades.
+                    </p>
+
+                    <!-- Economic Impact -->
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl my-8">
+                        <h3 class="text-xl font-bold mb-4 text-center">Impacto Económico</h3>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-2xl font-bold">15,000 M</p>
+                                <p class="text-green-100 text-sm">Millones de pesos</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold">95%</p>
+                                <p class="text-green-100 text-sm">Ocupación hotelera</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold">45</p>
+                                <p class="text-green-100 text-sm">Países visitantes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 font-['Lora']">Testimonios Ciudadanos</h2>
+
+                    <!-- Testimonials -->
+                    <div class="grid md:grid-cols-2 gap-6 my-8">
+                        <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Ana Rodríguez</p>
+                                    <p class="text-sm text-gray-500">Visitante de Guadalajara</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">
+                                "Es mi primera vez en el Zócalo para el Grito. La energía y el patriotismo son increíbles. Me siento orgullosa de ser mexicana."
+                            </p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Carlos Mendoza</p>
+                                    <p class="text-sm text-gray-500">Turista de España</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 text-sm italic">
+                                "Quedé impresionado con la organización y la pasión del pueblo mexicano. Una experiencia que nunca olvidaré."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 mt-12 pt-8">
+                        <p class="text-lg text-gray-800 font-light">
+                            Las celebraciones continuarán durante todo el mes patrio con eventos culturales, exposiciones y conciertos 
+                            en todas las entidades federativas, reforzando los lazos de unidad y orgullo nacional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <div class="border-t border-gray-200 mt-12 pt-8">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                            Independencia
+                        </span>
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                            Cultura Nacional
+                        </span>
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                            Festividades
+                        </span>
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                            Tradiciones
+                        </span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-gray-500">
+                        <div>
+                            <p>Publicado em 16 de Septiembre de 2024 • Actualizado há 2 horas</p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-green-600 transition-colors">
+                                <i class="far fa-share-square mr-2"></i>
+                                Compartir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../cultura/cervantina.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-purple-300 transition-all">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full mb-3 inline-block">Cultura</span>
+                    <h3 class="font-bold text-gray-800 mb-2">52° Festival Cervantino Anuncia Programação</h3>
+                    <p class="text-sm text-gray-600 mb-3">Evento contará com 40 países e 500 apresentações</p>
+                    <span class="text-purple-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="../politica/reforma_eleitoral.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-blue-300 transition-all">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-3 inline-block">Política</span>
+                    <h3 class="font-bold text-gray-800 mb-2">Reforma Eleitoral Divide Congresso</h3>
+                    <p class="text-sm text-gray-600 mb-3">Debates intensos sobre mudanças no sistema de votação</p>
+                    <span class="text-blue-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="../economia/peso_forte.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-green-300 transition-all">
+                    <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full mb-3 inline-block">Economía</span>
+                    <h3 class="font-bold text-gray-800 mb-2">Peso Alcança Maior Valor em 8 Anos</h3>
+                    <p class="text-sm text-gray-600 mb-3">Moeda se fortalece para 16.85 por dólar</p>
+                    <span class="text-green-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div class="text-center mt-4">
+            <a href="../../index.html" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Início
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-6">
+        <div class="text-center text-green-300 text-sm">
+            &copy; 2024 Noticias de México. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functionality
+        const menuButton = document.getElementById('menu-button');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Add reading time functionality
+        const articleContent = document.querySelector('.prose');
+        const readingTime = document.querySelector('.fa-clock').parentElement;
+        const words = articleContent.textContent.split(/\s+/).length;
+        const readingTimeMinutes = Math.ceil(words / 200);
+        readingTime.innerHTML = `<i class="far fa-clock mr-2"></i>${readingTimeMinutes} min de lectura`;
+    </script>
+</body>
+</html>
