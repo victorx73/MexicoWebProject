@@ -17,3 +17,4 @@ closeBtn.addEventListener('click', closeDrawer);
 drawer.addEventListener('click', function(e) {
     if (e.target === drawer) closeDrawer();
 });
+

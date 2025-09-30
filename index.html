@@ -1,110 +1,480 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/output.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Noticias de México</title>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .floating-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .floating-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .stat-card:hover::before {
+            left: 100%;
+        }
+        .news-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: #10b981;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(6, 95, 70, 0.9) 0%, rgba(4, 120, 87, 0.8) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><path fill="%23059669" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,261.3C672,256,768,224,864,197.3C960,171,1056,149,1152,160C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
-
-<body>
-
+<body class="bg-gradient-to-br from-gray-50 to-green-50 font-['Inter']">
     <!-- Header -->
-    <header class="w-full h-[140px] bg-gradient-to-r from-green-800 via-green-700 to-green-600 shadow-lg flex items-center px-8">
-        <div class="flex items-center space-x-6">
-            <button class="p-2 rounded-full hover:bg-green-900 transition-colors duration-200 focus:outline-none">
-                <span class="material-symbols-outlined text-white text-5xl" style="font-size: 56px;">menu</span>
-            </button>
-            <h1 class="text-white font-bold text-4xl md:text-5xl font-[Lora,serif] tracking-wide drop-shadow-lg">
-                Noticias de México
-            </h1>
-        </div>
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora'] tracking-tight">
+                            Noticias de México
+                        </h1>
+                        <p class="text-green-200 text-sm hidden md:block">Tu fuente confiable de información</p>
+                    </div>
+                </div>
 
-    <!-- Drawer Menu -->
-    <nav id="drawer-menu" class="drawer-menu" aria-hidden="true">
-        <button id="close-drawer" class="close-drawer" aria-label="Fechar menu">&times;</button>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="politica.html">Política</a></li>
-            <li><a href="cultura.html">Cultura</a></li>
-            <li><a href="economia.html">Economía</a></li>
-            <li><a href="turismo.html">Turismo</a></li>
-            <li><a href="deportes.html">Deportes</a></li>
-        </ul>
-    </nav>
-    </header>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-6 py-3 bg-white/20 text-white font-semibold rounded-xl border-2 border-white/30">
+                        <i class="fas fa-home mr-2"></i>Início
+                    </a>
+                    <a href="politica.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-landmark mr-2"></i>Política
+                    </a>
+                    <a href="cultura.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-palette mr-2"></i>Cultura
+                    </a>
+                    <a href="economia.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-chart-line mr-2"></i>Economía
+                    </a>
+                    <a href="turismo.html" class="px-6 py-3 text-green-100 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                        <i class="fas fa-umbrella-beach mr-2"></i>Turismo
+                    </a>
+                </nav>
 
-    <!-- Hero Section -->
-    <div
-        class="w-full flex flex-col justify-center items-center text-white text-center mb-8"
-        style="background: linear-gradient(rgba(0,100,0,0.5), rgba(139,0,0,0.5)), url('data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1440 320&quot;%3E%3Cpath fill=&quot;%23006400&quot; fill-opacity=&quot;0.3&quot; d=&quot;M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,138.7C672,139,768,149,864,149.3C960,149,1056,139,1152,138.7C1248,139,1344,149,1392,154.7L1440,160V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z&quot;%3E%3C/path%3E%3C/svg%3E'); height: 200px; background-size: contain; background-repeat: no-repeat; background-position: center; background-attachment: fixed;"
-    >
-        <span class="text-3xl md:text-4xl font-bold drop-shadow-lg tracking-wide">
-            Bienvenidos a las Noticias de México
-        </span>
-        <p class="mt-2 text-lg md:text-xl drop-shadow">
-            Explora las historias que dan vida a nuestra nación
-        </p>
-    </div>
-
-    <section class="max-w-6xl mx-auto my-8 px-2 sm:px-4 flex flex-col md:flex-row gap-4 md:gap-8">
-<!-- Notícias Principais -->
-<div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 flex-1 mb-4 md:mb-0">
-    <h2 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 border-b-2 border-green-700 pb-2 section-heading">Notícias Principais</h2>
-    <div class="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
-        <article class="news-card cursor-pointer" onclick="window.open('https://www.bbc.com/mundo/noticias-america-latina-123456', '_blank')">
-            <h3 class="news-title">México avanza en energías renovables</h3>
-            <p class="news-desc">El país incrementa su inversión en proyectos solares y eólicos para combatir el cambio climático.</p>
-        </article>
-        <article class="news-card cursor-pointer" onclick="window.open('https://elpais.com/mexico/2024/06/01/politica/987654', '_blank')">
-            <h3 class="news-title">Elecciones 2024: Resultados preliminares</h3>
-            <p class="news-desc">Los primeros resultados muestran una contienda cerrada entre los principales partidos políticos.</p>
-        </article>
-        <article class="news-card cursor-pointer" onclick="window.open('https://www.animalpolitico.com/2024/06/cultura-mexicana-festival', '_blank')">
-            <h3 class="news-title">Festival celebra la cultura mexicana</h3>
-            <p class="news-desc">Miles de personas asisten al evento anual que destaca la música, gastronomía y tradiciones del país.</p>
-        </article>
-        <article class="news-card cursor-pointer" onclick="window.open('https://www.milenio.com/policia/seguridad-ciudadana-mexico', '_blank')">
-            <h3 class="news-title">Nuevas medidas de seguridad ciudadana</h3>
-            <p class="news-desc">Autoridades implementan estrategias para mejorar la seguridad en las principales ciudades mexicanas.</p>
-        </article>
-    </div>
-    </div>
-    <!-- Últimas Notícias -->
-    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 w-full md:w-80 flex-shrink-0">
-        <h2 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 border-b-2 border-green-700 pb-2 section-heading">Últimas Notícias</h2>
-            <div class="grid gap-4 sm:gap-6">
-                <article class="news-card cursor-pointer" onclick="window.open('https://www.jornada.com.mx/ultimas/2024/06/01/avance-vacunacion-mexico-12345', '_blank')">
-                    <h3 class="news-title">Avance en vacunación contra enfermedades</h3>
-                    <p class="news-desc">Nuevas campañas de salud llegan a comunidades rurales.</p>
-                </article>
-                <article class="news-card cursor-pointer" onclick="window.open('https://www.excelsior.com.mx/nacional/lluvias-intensas-mexico-2024/98765', '_blank')">
-                    <h3 class="news-title">Lluvias intensas afectan varias regiones</h3>
-                    <p class="news-desc">Protección Civil emite alertas por tormentas en el sur del país.</p>
-                </article>
-                <article class="news-card cursor-pointer" onclick="window.open('https://www.unotv.com/noticias/ultimas-noticias-mexico-2024-06-01/', '_blank')">
-                    <h3 class="news-title">México recibe reconocimiento internacional</h3>
-                    <p class="news-desc">Premio por avances en tecnología educativa.</p>
-                </article>
-                <article class="news-card cursor-pointer" onclick="window.open('https://www.eluniversal.com.mx/deportes/tri-mexicano-gana-amistoso-2024/', '_blank')">
-                    <h3 class="news-title">El Tri gana partido amistoso</h3>
-                    <p class="news-desc">La selección mexicana vence a su rival en un emocionante encuentro.</p>
-                </article>
+                <button id="menu-button" class="lg:hidden p-3 bg-white/10 rounded-xl text-white hover:bg-white/20 transition-all duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm">
+        <div class="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl transform transition-transform duration-500">
+            <div class="p-6 h-full flex flex-col">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-green-800 font-['Lora']">Menu</h2>
+                    <button id="close-menu" class="p-2 text-gray-600 hover:text-gray-900 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <nav class="space-y-2 flex-1">
+                    <a href="index.html" class="flex items-center p-4 bg-green-100 text-green-700 font-semibold rounded-2xl border-l-4 border-green-500">
+                        <div class="w-10 h-10 bg-green-200 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-green-700"></i>
+                        </div>
+                        <span>Início</span>
+                    </a>
+                    <a href="politica.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
+                            <i class="fas fa-landmark text-blue-600"></i>
+                        </div>
+                        <span>Política</span>
+                    </a>
+                    <a href="cultura.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-purple-200 transition-colors">
+                            <i class="fas fa-palette text-purple-600"></i>
+                        </div>
+                        <span>Cultura</span>
+                    </a>
+                    <a href="economia.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-green-200 transition-colors">
+                            <i class="fas fa-chart-line text-green-600"></i>
+                        </div>
+                        <span>Economía</span>
+                    </a>
+                    <a href="turismo.html" class="flex items-center p-4 text-gray-700 hover:bg-green-50 rounded-2xl transition-all duration-300 group">
+                        <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-orange-200 transition-colors">
+                            <i class="fas fa-umbrella-beach text-orange-600"></i>
+                        </div>
+                        <span>Turismo</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm mb-6">
+                    <i class="fas fa-star mr-2"></i>
+                    <span class="text-sm font-medium">Noticias Destacadas</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 font-['Lora'] leading-tight">
+                    Bienvenidos a <span class="text-green-300">México</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-green-100 mb-8 leading-relaxed">
+                    Descubre las historias que dan vida a nuestra nación y conectan a nuestra comunidad
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="px-8 py-4 bg-white text-green-700 font-semibold rounded-2xl hover:bg-green-50 transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-newspaper mr-2"></i>Últimas Noticias
+                    </button>
+                    <button class="px-8 py-4 border-2 border-white text-white font-semibold rounded-2xl hover:bg-white/10 transition-all duration-300">
+                        <i class="fas fa-play mr-2"></i>Ver Video
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
 
-        <footer class="site-footer">
-            &copy; 2025 Noticias de México. Todos os direitos reservados.<br>
-            Desenvolvido por Victor | <a href="mailto:contato@noticiasdemexico.com">Contato</a>
-        </footer>
-</body>
-<script src="/script.js"></script>
-</body>
+    <main class="container mx-auto px-6 py-12 -mt-10 relative z-20">
+        <!-- Stats Grid -->
 
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <div class="lg:col-span-2">
+                <article class="bg-white rounded-3xl overflow-hidden floating-card border border-gray-100">
+                    <div class="relative">
+                        <div class="h-64 bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white text-8xl opacity-20"></i>
+                        </div>
+                        <div class="absolute top-6 left-6">
+                            <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-green-700 font-semibold text-sm">
+                                Noticia Destacada
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4 font-['Lora']">
+                            México celebra el Día de la Independencia con desfiles históricos
+                        </h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Miles de mexicanos se reunieron en el Zócalo de la Ciudad de México para presenciar 
+                            el desfile militar y las celebraciones patrióticas que conmemoran 213 años de independencia. 
+                            El evento contó con la participación de más de 25,000 elementos de las fuerzas armadas.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-gray-500">
+                                <span class="flex items-center">
+                                    <i class="far fa-calendar mr-2"></i>
+                                    16 Sept 2024
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="far fa-clock mr-2"></i>
+                                    4 min lectura
+                                </span>
+                            </div>
+                            <button class="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-colors duration-300">
+                                Leer Artículo Completo
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar Highlights -->
+            <div class="space-y-6">
+                <!-- Quick Stats -->
+                <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-3xl p-6 text-white floating-card">
+                    <h3 class="text-xl font-bold mb-4 font-['Lora']">México en Cifras</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center pb-3 border-b border-green-500">
+                            <span>Población Total</span>
+                            <span class="font-bold text-green-200">128M</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-green-500">
+                            <span>Estados</span>
+                            <span class="font-bold text-green-200">32</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-3 border-b border-green-500">
+                            <span>Idiomas</span>
+                            <span class="font-bold text-green-200">68</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Patrimonios UNESCO</span>
+                            <span class="font-bold text-green-200">35</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Topics -->
+                <div class="bg-white rounded-3xl p-6 floating-card border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 font-['Lora']">Tendencias</h3>
+                    <div class="space-y-3">
+                        <a href="politica.html" class="flex items-center p-3 hover:bg-green-50 rounded-xl transition-colors group">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-landmark text-blue-600 text-sm"></i>
+                            </div>
+                            <span class="text-gray-700 group-hover:text-green-600">Elecciones 2024</span>
+                        </a>
+                        <a href="cultura.html" class="flex items-center p-3 hover:bg-green-50 rounded-xl transition-colors group">
+                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-music text-purple-600 text-sm"></i>
+                            </div>
+                            <span class="text-gray-700 group-hover:text-green-600">Festival Cultural</span>
+                        </a>
+                        <a href="economia.html" class="flex items-center p-3 hover:bg-green-50 rounded-xl transition-colors group">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-green-600 text-sm"></i>
+                            </div>
+                            <span class="text-gray-700 group-hover:text-green-600">Crecimiento Económico</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <section class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 font-['Lora']">Últimas Noticias</h2>
+           
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- News Card 1 -->
+                <article class="news-card bg-white rounded-2xl p-6 floating-card">
+                    <div class="flex items-center mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">Política</span>
+                        <span class="mx-2 text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">Hace 2h</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg">Nuevas reformas educativas aprobadas</h3>
+                    <p class="text-gray-600 text-sm mb-4">El congreso aprueba reformas para modernizar el sistema educativo nacional con énfasis en tecnología.</p>
+                    <div class="flex items-center justify-between text-sm text-gray-500">
+                        <span>Por Carlos Mendoza</span>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card bg-white rounded-2xl p-6 floating-card">
+                    <div class="flex items-center mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Economía</span>
+                        <span class="mx-2 text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">Hace 4h</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg">Peso mexicano se fortalece</h3>
+                    <p class="text-gray-600 text-sm mb-4">La moneda nacional alcanza su mejor nivel en 5 años frente al dólar gracias a las exportaciones.</p>
+                    <div class="flex items-center justify-between text-sm text-gray-500">
+                        <span>Por Ana Rodríguez</span>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card bg-white rounded-2xl p-6 floating-card">
+                    <div class="flex items-center mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Cultura</span>
+                        <span class="mx-2 text-gray-400">•</span>
+                        <span class="text-sm text-gray-500">Hace 6h</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg">Festival de cine en Guadalajara</h3>
+                    <p class="text-gray-600 text-sm mb-4">Inicia el festival internacional de cine con más de 200 películas de 40 países participantes.</p>
+                    <div class="flex items-center justify-between text-sm text-gray-500">
+                        <span>Por Laura Sánchez</span>
+                        <a href="#" class="text-green-600 hover:text-green-700 font-semibold">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+ <section class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center font-['Lora']">Explora por Categorías</h2>
+    <div class="flex justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <a href="politica.html" class="group">
+                <div class="bg-white rounded-2xl p-6 text-center floating-card hover:bg-blue-50 transition-colors duration-300 w-48">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                        <i class="fas fa-landmark text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 group-hover:text-blue-600">Política</h3>
+                </div>
+            </a>
+            <a href="economia.html" class="group">
+                <div class="bg-white rounded-2xl p-6 text-center floating-card hover:bg-green-50 transition-colors duration-300 w-48">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 group-hover:text-green-600">Economía</h3>
+                </div>
+            </a>
+            <a href="cultura.html" class="group">
+                <div class="bg-white rounded-2xl p-6 text-center floating-card hover:bg-purple-50 transition-colors duration-300 w-48">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
+                        <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 group-hover:text-purple-600">Cultura</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold font-['Lora']">Noticias MX</span>
+                    </div>
+                    <p class="text-green-200 text-sm leading-relaxed">
+                        Tu fuente confiable de noticias sobre México. Cobertura completa de política, economía, cultura y más.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Secciones</h4>
+                    <ul class="space-y-2 text-green-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="politica.html" class="hover:text-white transition-colors">Política</a></li>
+                        <li><a href="economia.html" class="hover:text-white transition-colors">Economía</a></li>
+                        <li><a href="cultura.html" class="hover:text-white transition-colors">Cultura</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Enlaces</h4>
+                    <ul class="space-y-2 text-green-200">
+                        <li><a href="#" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Trabaja con Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Aviso de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Contacto</h4>
+                    <div class="space-y-3 text-green-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 w-5"></i>
+                            ronald@email.com
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3 w-5"></i>
+                            +52 55 1234 5678
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 w-5"></i>
+                            Ciudad de México
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-green-700 pt-8 text-center">
+                <p class="text-green-300 text-sm">
+                    &copy; 2024 Noticias de México. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functionality
+        const menuButton = document.getElementById('menu-button');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all floating cards
+        document.querySelectorAll('.floating-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // Observe news cards separately for staggered animation
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `all 0.6s ease-out ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+</body>
 </html>
