@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Festival de Cine | Noticias de México</title>
+    <style>
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora']">Noticias de México</h1>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 bg-white/20 text-white font-semibold rounded-xl"><i class="fas fa-home mr-2"></i>Início</a>
+                    <a href="../politica.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-landmark mr-2"></i>Política</a>
+                    <a href="../cultura.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-palette mr-2"></i>Cultura</a>
+                    <a href="../economia.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-chart-line mr-2"></i>Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../index.html" class="hover:text-green-700">Início</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700">Festival de Cine</span>
+        </nav>
+
+        <article class="bg-white rounded-3xl shadow-lg overflow-hidden mb-8">
+            <div class="h-64 bg-gradient-to-r from-purple-500 to-purple-600 relative">
+                <div class="absolute top-6 left-6">
+                    <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-purple-700 font-semibold text-sm">
+                        Cultura e Entretenimento
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="flex items-center mb-4 text-sm text-gray-500">
+                    <span class="flex items-center mr-6">
+                        <i class="far fa-calendar mr-2"></i>
+                        14 Setembro 2024
+                    </span>
+                    <span class="flex items-center">
+                        <i class="far fa-clock mr-2"></i>
+                        4 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-800 mb-6 font-['Lora']">Festival Internacional de Cine de Guadalajara Inicia com 200 Películas de 40 Países</h1>
+                
+                <div class="flex items-center mb-8 p-4 bg-purple-50 rounded-xl">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-film text-purple-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Laura Sánchez</p>
+                        <p class="text-sm text-gray-600">Crítica de Cinema</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-6">A 38ª edição do Festival Internacional de Cinema em Guadalajara foi inaugurada com uma cerimônia espetacular no Teatro Degollado, reunindo cineastas, atores e amantes do cinema de todo o mundo para celebrar a sétima arte com uma programação diversificada de 200 filmes de 40 países.</p>
+
+                    <!-- Highlight Box -->
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-2xl my-8 text-center">
+                        <p class="text-3xl font-bold">200 Filmes</p>
+                        <p class="text-purple-100">40 países representados</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Destaques da Programação</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <i class="fas fa-trophy text-purple-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-purple-700 mb-2">Competição Oficial</h3>
+                            <p class="text-sm">15 longas-metragens disputam o Prêmio Mayahuel</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <i class="fas fa-globe-americas text-purple-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-purple-700 mb-2">País Invitado: Brasil</h3>
+                            <p class="text-sm">Mostra especial com 20 filmes brasileiros</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Categorias em Destaque</h2>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎬 Seções Especiais</h3>
+                        <ul class="text-sm text-blue-700 list-disc list-inside">
+                            <li>Cine Mexicano Contemporâneo: 45 produções nacionais</li>
+                            <li>Documentários Latino-Americanos: 30 títulos</li>
+                            <li>Cinema e Direitos Humanos: 25 filmes engajados</li>
+                            <li>Animación Ibero-Americana: 20 produções</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Figuras Internacionais</h2>
+
+                    <div class="grid md:grid-cols-3 gap-4 my-6">
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-user text-yellow-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Alfonso Cuarón</h3>
+                            <p class="text-xs text-gray-600">Masterclass e homenagem</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-user text-green-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Fernanda Montenegro</h3>
+                            <p class="text-xs text-gray-600">Atriz brasileira convidada</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-user text-red-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Pedro Almodóvar</h3>
+                            <p class="text-xs text-gray-600">Jurado da competição</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Atividades Paralelas</h2>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 my-6">
+                        <h3 class="font-semibold text-green-800 mb-2">🎪 Eventos Especiais</h3>
+                        <ul class="text-sm text-green-700 list-disc list-inside">
+                            <li>Mercado de Cinema: 300 empresas participantes</li>
+                            <li>Talleres para jovens cineastas: 15 oficinas</li>
+                            <li>Exposições de cartazes cinematográficos</li>
+                            <li>Encontros com diretores e elencos</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Impacto Cultural e Económico</h2>
+
+                    <div class="bg-orange-100 p-4 rounded-xl my-6">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <p class="text-2xl font-bold text-orange-700">85.000</p>
+                                <p class="text-xs text-orange-600">Espectadores esperados</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-orange-700">US$ 15M</p>
+                                <p class="text-xs text-orange-600">Impacto económico</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-orange-700">1.200</p>
+                                <p class="text-xs text-orange-600">Profissionais do cinema</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-orange-700">45</p>
+                                <p class="text-xs text-orange-600">Salas de projeção</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Inovações Digitais</h2>
+
+                    <div class="bg-gray-50 border-l-4 border-gray-400 p-4 my-6">
+                        <h3 class="font-semibold text-gray-800 mb-2">💡 Novas Tecnologias</h3>
+                        <ul class="text-sm text-gray-700 list-disc list-inside">
+                            <li>Plataforma de streaming para acesso remoto</li>
+                            <li>Realidade virtual em experiências cinematográficas</li>
+                            <li>Inteligência artificial na curadoria de filmes</li>
+                            <li>App oficial com programação personalizada</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Filmes Mexicanos em Competição</h2>
+                    
+                    <p class="mb-6">O cinema nacional está bem representado com 8 produções na competição oficial, demonstrando a vitalidade e criatividade da indústria cinematográfica mexicana.</p>
+
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 my-6">
+                        <h3 class="font-semibold text-red-800 mb-2">🎭 Produções Nacionais</h3>
+                        <ul class="text-sm text-red-700 list-disc list-inside">
+                            <li>"El Último Suspiro" - Drama histórico</li>
+                            <li>"Latidos del Desierto" - Romance contemporâneo</li>
+                            <li>"Raíces del Viento" - Documentário antropológico</li>
+                            <li>"Espejos en la Niebla" - Thriller psicológico</li>
+                        </ul>
+                    </div>
+
+                    <blockquote class="border-l-4 border-purple-500 pl-4 my-6 italic text-gray-600">
+                        "Este festival não é apenas sobre exibir filmes, mas sobre construir pontes entre culturas e inspirar uma nova geração de contadores de histórias mexicanos"
+                        <footer class="text-sm text-gray-500 mt-2">- Diretor do Festival</footer>
+                    </blockquote>
+
+                    <p class="mb-6">O festival continuará até 22 de setembro, com projeções, workshops e eventos especiais em diversas locações de Guadalajara, consolidando a cidade como capital cultural do oeste mexicano.</p>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Cinema</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Guadalajara</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Cultura</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Festival</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Publicado em 14 de Setembro de 2024</span>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-purple-600">
+                                <i class="far fa-share-square mr-1"></i>
+                                Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="reformas.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-purple-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Novas Reformas Educativas</h3>
+                    <p class="text-sm text-gray-600 mb-3">Congresso moderniza sistema educativo</p>
+                    <span class="text-purple-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="artigo_destaque.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-purple-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Día de la Independencia</h3>
+                    <p class="text-sm text-gray-600 mb-3">Celebrações históricas no Zócalo</p>
+                    <span class="text-purple-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="../index.html" class="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Início
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Noticias de México. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cultura Cervantina | Noticias de México</title>
+    <style>
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora']">Noticias de México</h1>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../../index.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-home mr-2"></i>Início</a>
+                    <a href="../../politica.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-landmark mr-2"></i>Política</a>
+                    <a href="../../cultura.html" class="px-4 py-2 bg-white/20 text-white font-semibold rounded-xl"><i class="fas fa-palette mr-2"></i>Cultura</a>
+                    <a href="../../economia.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-chart-line mr-2"></i>Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../../index.html" class="hover:text-green-700">Início</a>
+            <span class="mx-2">/</span>
+            <a href="../../cultura.html" class="hover:text-green-700">Cultura</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700">Cervantina</span>
+        </nav>
+
+        <article class="bg-white rounded-3xl shadow-lg overflow-hidden mb-8">
+            <div class="h-64 bg-gradient-to-r from-purple-500 to-purple-600 relative">
+                <div class="absolute top-6 left-6">
+                    <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-purple-700 font-semibold text-sm">
+                        Cultura
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="flex items-center mb-4 text-sm text-gray-500">
+                    <span class="flex items-center mr-6">
+                        <i class="far fa-calendar mr-2"></i>
+                        18 Maio 2024
+                    </span>
+                    <span class="flex items-center">
+                        <i class="far fa-clock mr-2"></i>
+                        5 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-800 mb-6 font-['Lora']">Festival Cervantino Atrai Artistas Internacionais</h1>
+                
+                <div class="flex items-center mb-8 p-4 bg-purple-50 rounded-xl">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-music text-purple-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Ana Rodríguez</p>
+                        <p class="text-sm text-gray-600">Crítica Cultural</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-6">O 51º Festival Internacional Cervantino transformou Guanajuato em um palco global, reunindo mais de 3.000 artistas de 45 países em uma celebração que redefine as fronteiras da arte contemporânea.</p>
+
+                    <!-- Highlight Box -->
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-2xl my-8 text-center">
+                        <p class="text-3xl font-bold">45 Países</p>
+                        <p class="text-purple-100">Representados no festival</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Destaques da Programação</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <i class="fas fa-theater-masks text-purple-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-purple-700 mb-2">Teatro Experimental</h3>
+                            <p class="text-sm">Companhias da Coreia do Sul e Polônia apresentam inovações cênicas</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <i class="fas fa-guitar text-purple-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-purple-700 mb-2">Música Mundial</h3>
+                            <p class="text-sm">Orquestras sinfônicas e grupos de jazz contemporâneo</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Impacto Cultural</h2>
+
+                    <p class="mb-4">O festival não apenas entreten, mas também fortalece o tecido cultural mexicano:</p>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎭 Benefícios Artísticos</h3>
+                        <ul class="text-sm text-blue-700 list-disc list-inside">
+                            <li>Intercâmbio cultural internacional</li>
+                            <li>Plataforma para artistas emergentes mexicanos</li>
+                            <li>Inovação nas linguagens artísticas</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+                        <h3 class="font-semibold text-yellow-800 mb-2">💼 Impacto Económico</h3>
+                        <ul class="text-sm text-yellow-700 list-disc list-inside">
+                            <li>Geração de 15.000 empregos temporários</li>
+                            <li>Movimentação de US$ 50 milhões na economía local</li>
+                            <li>Ocupação hoteleira de 95%</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Futuro da Cultura</h2>
+                    
+                    <p class="mb-6">A edição deste ano estabelece novos paradigmas para a produção cultural na América Latina, com investimentos recorde em tecnologia digital e acessibilidade.</p>
+
+                    <blockquote class="border-l-4 border-purple-500 pl-4 my-6 italic text-gray-600">
+                        "O Cervantino demonstra que a arte é essencial para o desenvolvimento humano e económico de nossa sociedade"
+                        <footer class="text-sm text-gray-500 mt-2">- Diretora do Festival</footer>
+                    </blockquote>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Festival</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Arte</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">Guanajuato</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Publicado em 18 de Maio de 2024</span>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-purple-600">
+                                <i class="far fa-share-square mr-1"></i>
+                                Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="noticia2.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-purple-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Artes Visuais em Destaque</h3>
+                    <p class="text-sm text-gray-600 mb-3">Exposição reúne artistas contemporâneos</p>
+                    <span class="text-purple-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="../../cultura.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-purple-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Mais Notícias de Cultura</h3>
+                    <p class="text-sm text-gray-600 mb-3">Acesse todas as matérias da seção</p>
+                    <span class="text-purple-600 text-sm font-semibold">Ver todas →</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="../../cultura.html" class="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Cultura
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Noticias de México. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

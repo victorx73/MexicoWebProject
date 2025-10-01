@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Transição Energética | Noticias de México</title>
+    <style>
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora']">Noticias de México</h1>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../../index.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-home mr-2"></i>Início</a>
+                    <a href="../../politica.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-landmark mr-2"></i>Política</a>
+                    <a href="../../cultura.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-palette mr-2"></i>Cultura</a>
+                    <a href="../../economia.html" class="px-4 py-2 bg-white/20 text-white font-semibold rounded-xl"><i class="fas fa-chart-line mr-2"></i>Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../../index.html" class="hover:text-green-700">Início</a>
+            <span class="mx-2">/</span>
+            <a href="../../economia.html" class="hover:text-green-700">Economía</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700">Energia Sustentável</span>
+        </nav>
+
+        <article class="bg-white rounded-3xl shadow-lg overflow-hidden mb-8">
+            <div class="h-64 bg-gradient-to-r from-orange-500 to-orange-600 relative">
+                <div class="absolute top-6 left-6">
+                    <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-orange-700 font-semibold text-sm">
+                        Energia Renovável
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="flex items-center mb-4 text-sm text-gray-500">
+                    <span class="flex items-center mr-6">
+                        <i class="far fa-calendar mr-2"></i>
+                        3 Maio 2024
+                    </span>
+                    <span class="flex items-center">
+                        <i class="far fa-clock mr-2"></i>
+                        7 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-800 mb-6 font-['Lora']">México Anuncia Plano de US$ 15 Bilhões para Acelerar Transição Energética até 2030</h1>
+                
+                <div class="flex items-center mb-8 p-4 bg-orange-50 rounded-xl">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-solar-panel text-orange-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Miguel Ángel Torres</p>
+                        <p class="text-sm text-gray-600">Especialista em Energia</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-6">O governo mexicano revelou um ambicioso plano de US$ 15 bilhões para acelerar a transição energética, com meta de atingir 50% de energia limpa na matriz elétrica até 2030, posicionando o país como líder em energias renováveis na América Latina.</p>
+
+                    <!-- Highlight Box -->
+                    <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 rounded-2xl my-8 text-center">
+                        <p class="text-3xl font-bold">US$ 15 Bi</p>
+                        <p class="text-orange-100">Investimento até 2030</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Distribuição dos Investimentos</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-orange-50 p-4 rounded-xl">
+                            <i class="fas fa-sun text-orange-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-orange-700 mb-2">Energia Solar</h3>
+                            <p class="text-sm">US$ 6 bilhões para novos parques solares</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-xl">
+                            <i class="fas fa-wind text-orange-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-orange-700 mb-2">Energia Eólica</h3>
+                            <p class="text-sm">US$ 4 bilhões em complexos eólicos</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Metas Ambiciosas</h2>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 my-6">
+                        <h3 class="font-semibold text-green-800 mb-2">🎯 Objetivos para 2030</h3>
+                        <ul class="text-sm text-green-700 list-disc list-inside">
+                            <li>50% da matriz energética de fontes renováveis</li>
+                            <li>Redução de 45% nas emissões de carbono</li>
+                            <li>20 GW de capacidade renovável instalada</li>
+                            <li>1 milhão de veículos elétricos em circulação</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Projetos Estruturados</h2>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-blue-50 p-4 rounded-xl">
+                            <h3 class="font-semibold text-blue-700 mb-3">🏜️ Corredor Solar do Norte</h3>
+                            <ul class="text-sm text-blue-600 list-disc list-inside">
+                                <li>Sonora: 3GW de capacidade solar</li>
+                                <li>Chihuahua: 2GW em desenvolvimento</li>
+                                <li>Baja California: 1.5GW planejados</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl">
+                            <h3 class="font-semibold text-gray-700 mb-3">💨 Complexos Eólicos</h3>
+                            <ul class="text-sm text-gray-600 list-disc list-inside">
+                                <li>Istmo de Tehuantepec: 5GW de capacidade</li>
+                                <li>Tamaulipas: 2GW em operação</li>
+                                <li>Oaxaca: Expansão de 3GW</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Tecnologias Inovadoras</h2>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-400 p-4 my-6">
+                        <h3 class="font-semibold text-purple-800 mb-2">🔋 Armazenamento de Energia</h3>
+                        <ul class="text-sm text-purple-700 list-disc list-inside">
+                            <li>Baterias de íon-lítio em larga escala</li>
+                            <li>Hidrogênio verde como vetor energético</li>
+                            <li>Sistemas de bombeamento hidroelétrico</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Impacto Económico</h2>
+
+                    <div class="bg-yellow-100 p-4 rounded-xl my-6">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <p class="text-2xl font-bold text-yellow-700">85.000</p>
+                                <p class="text-xs text-yellow-600">Empregos diretos</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-yellow-700">210.000</p>
+                                <p class="text-xs text-yellow-600">Empregos indiretos</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-yellow-700">US$ 32Bi</p>
+                                <p class="text-xs text-yellow-600">PIB adicional</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-yellow-700">-45%</p>
+                                <p class="text-xs text-yellow-600">Emissões CO₂</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Parcerias Estratégicas</h2>
+
+                    <div class="grid md:grid-cols-3 gap-4 my-6">
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-industry text-red-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Setor Privado</h3>
+                            <p class="text-xs text-gray-600">US$ 9 bilhões em investimentos</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-university text-blue-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Bancos Internacionais</h3>
+                            <p class="text-xs text-gray-600">US$ 4 bilhões em financiamento</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-4 rounded-xl text-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-handshake text-green-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Cooperação Internacional</h3>
+                            <p class="text-xs text-gray-600">US$ 2 bilhões em projetos</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Benefícios Ambientais</h2>
+
+                    <div class="bg-green-100 p-4 rounded-xl my-6">
+                        <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-700">25M</p>
+                                <p class="text-xs text-green-600">Toneladas de CO₂ reduzidas/ano</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-700">12M</p>
+                                <p class="text-xs text-green-600">Hectares de florestas preservadas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Linha do Tempo</h2>
+                    
+                    <div class="bg-gray-100 p-4 rounded-xl my-6">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="font-semibold">Fase 1: Infraestrutura (2024-2026)</span>
+                            <span class="text-gray-600">US$ 8 bilhões</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm mt-2">
+                            <span class="font-semibold">Fase 2: Expansão (2027-2028)</span>
+                            <span class="text-gray-600">US$ 5 bilhões</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm mt-2">
+                            <span class="font-semibold">Fase 3: Consolidação (2029-2030)</span>
+                            <span class="text-gray-600">US$ 2 bilhões</span>
+                        </div>
+                    </div>
+
+                    <blockquote class="border-l-4 border-orange-500 pl-4 my-6 italic text-gray-600">
+                        "Esta transição energética não é apenas uma necessidade ambiental, mas uma oportunidade económica histórica. Estamos construindo as bases para um México mais verde, próspero e tecnologicamente avançado"
+                        <footer class="text-sm text-gray-500 mt-2">- Secretário de Energia</footer>
+                    </blockquote>
+
+                    <p class="mb-6">Especialistas internacionais avaliam que o plano mexicano pode servir de modelo para outros países em desenvolvimento, demonstrando que é possível conciliar crescimento económico com sustentabilidade ambiental.</p>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Energia Renovável</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Sustentabilidade</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Investimento</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Meio Ambiente</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Publicado em 3 de Maio de 2024</span>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-orange-600">
+                                <i class="far fa-share-square mr-1"></i>
+                                Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="automotivo.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-orange-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Setor Automotivo Bate Recorde</h3>
+                    <p class="text-sm text-gray-600 mb-3">Produção aumenta 8.7% com demanda internacional</p>
+                    <span class="text-orange-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="investimento.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-orange-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Investimentos em Tech no Norte</h3>
+                    <p class="text-sm text-gray-600 mb-3">US$ 2.3 bilhões para expansão em Nuevo León</p>
+                    <span class="text-orange-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="../../economia.html" class="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-xl hover:bg-orange-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Economía
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Noticias de México. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

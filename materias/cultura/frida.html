@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Frida Kahlo | Noticias de México</title>
+    <style>
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora']">Noticias de México</h1>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../../index.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-home mr-2"></i>Início</a>
+                    <a href="../../politica.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-landmark mr-2"></i>Política</a>
+                    <a href="../../cultura.html" class="px-4 py-2 bg-white/20 text-white font-semibold rounded-xl"><i class="fas fa-palette mr-2"></i>Cultura</a>
+                    <a href="../../economia.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-chart-line mr-2"></i>Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../../index.html" class="hover:text-green-700">Início</a>
+            <span class="mx-2">/</span>
+            <a href="../../cultura.html" class="hover:text-green-700">Cultura</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700">Frida Kahlo</span>
+        </nav>
+
+        <article class="bg-white rounded-3xl shadow-lg overflow-hidden mb-8">
+            <div class="h-64 bg-gradient-to-r from-yellow-500 to-yellow-600 relative">
+                <div class="absolute top-6 left-6">
+                    <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-yellow-700 font-semibold text-sm">
+                        Arte e Exposição
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="flex items-center mb-4 text-sm text-gray-500">
+                    <span class="flex items-center mr-6">
+                        <i class="far fa-calendar mr-2"></i>
+                        15 Maio 2024
+                    </span>
+                    <span class="flex items-center">
+                        <i class="far fa-clock mr-2"></i>
+                        7 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-800 mb-6 font-['Lora']">Museu Bellas Artes Inaugura Exposição com Obras Inéditas de Frida Kahlo</h1>
+                
+                <div class="flex items-center mb-8 p-4 bg-yellow-50 rounded-xl">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-paint-brush text-yellow-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Elena Castillo</p>
+                        <p class="text-sm text-gray-600">Curadora de Arte</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-6">O Palácio de Bellas Artes abriu suas portas para a mais ambiciosa exposição já dedicada a Frida Kahlo, reunindo 150 obras incluindo 35 pinturas nunca antes exibidas publicamente, provenientes de coleções particulares ao redor do mundo.</p>
+
+                    <!-- Highlight Box -->
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-6 rounded-2xl my-8 text-center">
+                        <p class="text-3xl font-bold">150 Obras</p>
+                        <p class="text-yellow-100">35 pinturas inéditas ao público</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Destaques da Exposição</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-yellow-50 p-4 rounded-xl">
+                            <i class="fas fa-eye text-yellow-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-yellow-700 mb-2">Obras Inéditas</h3>
+                            <p class="text-sm">"Raízes Mexicanas" - pintura de 1938 nunca exibida</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-xl">
+                            <i class="fas fa-history text-yellow-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-yellow-700 mb-2">Documentos Históricos</h3>
+                            <p class="text-sm">Cartas pessoais e diários da artista</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Seções da Exposição</h2>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎨 Fase Inicial (1925-1932)</h3>
+                        <ul class="text-sm text-blue-700 list-disc list-inside">
+                            <li>Primeiros autorretratos e experimentações</li>
+                            <li>Influência do muralismo mexicano</li>
+                            <li>15 obras desta fase, incluindo 5 inéditas</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 my-6">
+                        <h3 class="font-semibold text-green-800 mb-2">💪 Maturidade Artística (1933-1945)</h3>
+                        <ul class="text-sm text-green-700 list-disc list-inside">
+                            <li>Consolidação do estilo único de Frida</li>
+                            <li>Exploração da identidade mexicana e feminina</li>
+                            <li>Série de autorretratos mais emblemáticos</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-400 p-4 my-6">
+                        <h3 class="font-semibold text-purple-800 mb-2">🌟 Legado e Influência (1946-1954)</h3>
+                        <ul class="text-sm text-purple-700 list-disc list-inside">
+                            <li>Últimas obras e reflexões sobre a mortalidade</li>
+                            <li>Influência na arte contemporânea mundial</li>
+                            <li>Documentos sobre seu ativismo político</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Tecnologia e Experiência Imersiva</h2>
+
+                    <p class="mb-4">A exposição incorpora tecnologia de ponta para oferecer uma experiência única aos visitantes:</p>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-pink-50 p-4 rounded-xl">
+                            <i class="fas fa-vr-cardboard text-pink-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-pink-700 mb-2">Realidade Virtual</h3>
+                            <p class="text-sm">Tour pela Casa Azul em Coyoacán</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-xl">
+                            <i class="fas fa-film text-indigo-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-indigo-700 mb-2">Documentário Exclusivo</h3>
+                            <p class="text-sm">Entrevistas com especialistas e familiares</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Impacto Cultural</h2>
+                    
+                    <p class="mb-6">A exposição já bateu recordes de pré-venda, com mais de 100.000 ingressos vendidos antes da abertura. Espera-se que seja a mostra mais visitada na história do Bellas Artes, superando a marca de 500.000 visitantes.</p>
+
+                    <blockquote class="border-l-4 border-yellow-500 pl-4 my-6 italic text-gray-600">
+                        "Frida continua inspirando novas gerações. Sua arte fala sobre dor, amor e identidade de forma universal e atemporal"
+                        <footer class="text-sm text-gray-500 mt-2">- Curadora da Exposição</footer>
+                    </blockquote>
+
+                    <p class="mb-6">A exposição "Frida Kahlo: Raízes e Asas" ficará em cartaz até 15 de setembro de 2024, com ingressos disponíveis através do site do museu e bilheterias físicas.</p>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full">Frida Kahlo</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full">Bellas Artes</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full">Arte Mexicana</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Publicado em 15 de Maio de 2024</span>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-yellow-600">
+                                <i class="far fa-share-square mr-1"></i>
+                                Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="cervantina.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-yellow-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Festival Cervantino 2024</h3>
+                    <p class="text-sm text-gray-600 mb-3">40 países confirmados na programação</p>
+                    <span class="text-yellow-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="../../cultura.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-yellow-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Mais Notícias de Cultura</h3>
+                    <p class="text-sm text-gray-600 mb-3">Acesse todas as matérias da seção</p>
+                    <span class="text-yellow-600 text-sm font-semibold">Ver todas →</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="../../cultura.html" class="inline-flex items-center px-6 py-3 bg-yellow-600 text-white font-semibold rounded-xl hover:bg-yellow-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Cultura
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Noticias de México. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

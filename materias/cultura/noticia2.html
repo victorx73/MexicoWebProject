@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mariachi UNESCO | Noticias de México</title>
+    <style>
+        .floating-card { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .floating-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <header class="w-full bg-gradient-to-r from-green-900 via-green-800 to-green-700 shadow-2xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="p-3 bg-white/10 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-newspaper text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-white font-['Lora']">Noticias de México</h1>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="../../index.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-home mr-2"></i>Início</a>
+                    <a href="../../politica.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-landmark mr-2"></i>Política</a>
+                    <a href="../../cultura.html" class="px-4 py-2 bg-white/20 text-white font-semibold rounded-xl"><i class="fas fa-palette mr-2"></i>Cultura</a>
+                    <a href="../../economia.html" class="px-4 py-2 text-green-100 hover:text-white hover:bg-white/10 rounded-xl"><i class="fas fa-chart-line mr-2"></i>Economía</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+        <nav class="flex mb-6 text-sm text-gray-600">
+            <a href="../../index.html" class="hover:text-green-700">Início</a>
+            <span class="mx-2">/</span>
+            <a href="../../cultura.html" class="hover:text-green-700">Cultura</a>
+            <span class="mx-2">/</span>
+            <span class="text-green-700">Mariachi UNESCO</span>
+        </nav>
+
+        <article class="bg-white rounded-3xl shadow-lg overflow-hidden mb-8">
+            <div class="h-64 bg-gradient-to-r from-pink-500 to-pink-600 relative">
+                <div class="absolute top-6 left-6">
+                    <span class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-pink-700 font-semibold text-sm">
+                        Música Tradicional
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="flex items-center mb-4 text-sm text-gray-500">
+                    <span class="flex items-center mr-6">
+                        <i class="far fa-calendar mr-2"></i>
+                        18 Maio 2024
+                    </span>
+                    <span class="flex items-center">
+                        <i class="far fa-clock mr-2"></i>
+                        5 min de leitura
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-800 mb-6 font-['Lora']">UNESCO Declara Mariachi como Patrimônio Cultural Imaterial da Humanidade</h1>
+                
+                <div class="flex items-center mb-8 p-4 bg-pink-50 rounded-xl">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-music text-pink-600"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">José Hernández</p>
+                        <p class="text-sm text-gray-600">Especialista em Música Tradicional</p>
+                    </div>
+                </div>
+
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-6">A UNESCO incluiu oficialmente o Mariachi Mexicano na Lista Representativa do Patrimônio Cultural Imaterial da Humanidade, reconhecendo sua importância como expressão musical única e símbolo da identidade nacional.</p>
+
+                    <!-- Highlight Box -->
+                    <div class="bg-gradient-to-r from-pink-500 to-pink-600 text-white p-6 rounded-2xl my-8 text-center">
+                        <p class="text-3xl font-bold">2011 → 2024</p>
+                        <p class="text-pink-100">Reconhecimento internacional consolidado</p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">História do Reconhecimento</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-pink-50 p-4 rounded-xl">
+                            <i class="fas fa-award text-pink-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-pink-700 mb-2">2011</h3>
+                            <p class="text-sm">Inscrição inicial na lista da UNESCO como Patrimônio Imaterial</p>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-xl">
+                            <i class="fas fa-globe-americas text-pink-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-pink-700 mb-2">2024</h3>
+                            <p class="text-sm">Reconhecimento ampliado para proteção internacional</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Elementos Reconhecidos</h2>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+                        <h3 class="font-semibold text-blue-800 mb-2">🎵 Tradição Musical</h3>
+                        <ul class="text-sm text-blue-700 list-disc list-inside">
+                            <li>Repertório de mais de 1.000 canções tradicionais</li>
+                            <li>Técnicas de execução transmitidas por gerações</li>
+                            <li>Instrumentos característicos: vihuela, guitarón, trompete</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-4 my-6">
+                        <h3 class="font-semibold text-green-800 mb-2">👥 Aspectos Sociais</h3>
+                        <ul class="text-sm text-green-700 list-disc list-inside">
+                            <li>Papel central em celebrações familiares e comunitárias</li>
+                            <li>Transmissão intergeracional de conhecimentos</li>
+                            <li>Fortalecimento da identidade cultural mexicana</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Impacto no Presente</h2>
+
+                    <p class="mb-4">O reconhecimento da UNESCO traz importantes implicações para a preservação e promoção do mariachi:</p>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-yellow-50 p-4 rounded-xl">
+                            <i class="fas fa-graduation-cap text-yellow-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-yellow-700 mb-2">Educação Musical</h3>
+                            <p class="text-sm">Criação de 50 novas escolas de mariachi no país</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-xl">
+                            <i class="fas fa-briefcase text-purple-600 text-xl mb-2"></i>
+                            <h3 class="font-semibold text-purple-700 mb-2">Economia Criativa</h3>
+                            <p class="text-sm">Geração de 15.000 empregos diretos na indústria</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4 font-['Lora']">Celebrações Nacionais</h2>
+                    
+                    <p class="mb-6">Para comemorar o reconhecimento, o governo mexicano anunciou a realização do Primeiro Encontro Mundial de Mariachi, com participantes de 25 países previsto para novembro de 2024 na Cidade do México.</p>
+
+                    <blockquote class="border-l-4 border-pink-500 pl-4 my-6 italic text-gray-600">
+                        "O mariachi não é apenas música, é a alma do México expressa em cada nota. Este reconhecimento fortalece nossa identidade no mundo"
+                        <footer class="text-sm text-gray-500 mt-2">- Ministro da Cultura</footer>
+                    </blockquote>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 text-sm rounded-full">Mariachi</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 text-sm rounded-full">UNESCO</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 text-sm rounded-full">Música Tradicional</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Publicado em 18 de Maio de 2024</span>
+                        <div class="flex space-x-4">
+                            <button class="flex items-center text-gray-500 hover:text-pink-600">
+                                <i class="far fa-share-square mr-1"></i>
+                                Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 font-['Lora']">Matérias Relacionadas</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="frida.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-pink-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Exposição de Frida Kahlo</h3>
+                    <p class="text-sm text-gray-600 mb-3">Museu Bellas Artes inaugura mostra inédita</p>
+                    <span class="text-pink-600 text-sm font-semibold">Ler mais →</span>
+                </a>
+                <a href="../../cultura.html" class="bg-white rounded-xl p-6 floating-card border border-gray-100 hover:border-pink-300 transition-all">
+                    <h3 class="font-bold text-gray-800 mb-2">Mais Notícias de Cultura</h3>
+                    <p class="text-sm text-gray-600 mb-3">Acesse todas as matérias da seção</p>
+                    <span class="text-pink-600 text-sm font-semibold">Ver todas →</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <a href="../../cultura.html" class="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-xl hover:bg-pink-700 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Cultura
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Noticias de México. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
